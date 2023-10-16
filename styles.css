@@ -1,0 +1,104 @@
+:root {
+  --main-gray: #E9E8E8;
+  --main-dark-purple: #371E30;
+  --main-light-purple: #A03E99;
+  --main-pink: #CA4E79;
+  --main-black: #20262E;
+}
+
+body {
+  font-family: Poppins, Open-sans;
+  font-size:1.8rem;
+  line-height:1.4;
+  color:var(--main-gray);
+  margin: 0;
+  
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--main-light-purple);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 0 var(--main-gray)(0, 0, 0, 0.4);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+@media (hover: hover) {
+  /* when hover is supported */
+  .nav-list a:hover {
+  background-color: var(--main-black);
+}
+}
+
+.nav-list a {
+  display: block;
+  text-decoration: none;
+  color: var(--main-gray);
+  padding: 25px;
+}
+
+.welcome-section {
+  background-color: var(--main-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.welcome-section > h1 {
+  font-weight: 700;
+  text-align: center;
+  margin: 0px;
+}
+
+.welcome-section > p {
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+  color: var(--main-light-purple);
+  margin: 0px;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: var(--main-pink);
+
+}
+
+.project-section-header {
+  padding: 20px;
+}
+
+.project-grid {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 5px;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.project {
+  background: var(--main-dark-purple);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
